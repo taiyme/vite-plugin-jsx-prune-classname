@@ -10,7 +10,7 @@ export default function jsxPruneClassName(options?: Options) {
     transform(sourceCode, id) {
       if (id.includes('/node_modules/')) return;
 
-      if (!id.endsWith('.tsx') || !id.endsWith('.jsx')) return;
+      if (!id.endsWith('.tsx') && !id.endsWith('.jsx')) return;
 
       return transform(sourceCode, options);
     },
