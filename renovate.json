@@ -1,6 +1,44 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ]
+    "config:best-practices",
+    "schedule:weekly",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "automerge": false,
+  "timezone": "Asia/Tokyo",
+  "assignees": ["taiyme"],
+  "reviewers": ["taiyme"],
+  "labels": ["renovate", "dependencies"],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "separateMajorMinor": true,
+  "separateMultipleMajor": true,
+  "rebaseWhen": "never",
+  "ignoreDeps": ["ubuntu"],
+  "packageRules": [
+    {
+      "groupName": "ci dependencies (non-major)",
+      "groupSlug": "ci-deps-non-major",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "dependencies (non-major)",
+      "groupSlug": "deps-non-major",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "runtime dependencies",
+      "groupSlug": "runtime-deps",
+      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"]
+    }
+  ],
+  "lockFileMaintenance": {
+    "extends": [
+      "schedule:monthly"
+    ],
+    "enabled": true
+  }
 }
