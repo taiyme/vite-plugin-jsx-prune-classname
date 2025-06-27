@@ -1,6 +1,6 @@
 {
   "name": "@taiyme/vite-plugin-jsx-prune-classname",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "description": "classNameの余分なスペースを除去するViteプラグイン",
   "homepage": "https://github.com/taiyme/vite-plugin-jsx-prune-classname",
