@@ -1,0 +1,13 @@
+# prod
+dist/
+
+# deps
+node_modules/
+
+# logs
+logs/
+*.log
+pnpm-debug.log*
+
+# misc
+.DS_Store

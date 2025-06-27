@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "vitest.explorer",
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode",
+  ],
+}
