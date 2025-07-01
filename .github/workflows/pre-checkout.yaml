@@ -29,10 +29,9 @@ jobs:
             if [[ -z "$pr_number" ]]; then
               exit 1
             fi
-            echo "ref=refs/pull/${pr_number}/merge" >> $GITHUB_OUTPUT
-          else
-            echo "ref=${default_ref}" >> $GITHUB_OUTPUT
+            specify_ref="refs/pull/${pr_number}/merge"
           fi
+          echo "ref=${specify_ref:-$default_ref}" >> $GITHUB_OUTPUT
 
       - name: Checkout
         id: checkout
