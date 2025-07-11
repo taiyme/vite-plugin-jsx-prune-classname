@@ -24,11 +24,8 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "node ./scripts/prebuild.js",
-    "build": "tsc --project ./tsconfig.build.json",
-    "postbuild": "node ./scripts/postbuild.js",
-    "clean": "node ./scripts/clean.js",
-    "postclean": "pnpm store prune",
+    "build": "tsdown",
+    "clean": "node ./scripts/clean.js && pnpm store prune",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "pnpm run build",
@@ -53,6 +50,7 @@
     "eslint-config-flat-gitignore": "2.1.0",
     "globals": "16.2.0",
     "jiti": "2.4.2",
+    "tsdown": "0.12.9",
     "typescript": "5.8.3",
     "vite": "7.0.0",
     "vitest": "3.2.4"
