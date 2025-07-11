@@ -1,5 +1,5 @@
-import type { Options } from './options.js';
-import { transform as internalTransform } from './transform.js';
+import type { Options } from '@/options.js';
+import { transform as internalTransform } from '@/transform.js';
 
 export function transform(input: string, options?: Options) {
   return internalTransform(input, options)?.code ?? '';

@@ -11,6 +11,11 @@
     ],
     "libReplacement": true,
     "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*",
+      ],
+    },
     "noEmit": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,

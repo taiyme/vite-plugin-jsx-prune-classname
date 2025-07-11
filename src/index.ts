@@ -1,7 +1,7 @@
 import type { Plugin } from 'vite';
 
-import type { Options } from './options.js';
-import { transform } from './transform.js';
+import type { Options } from '@/options.js';
+import { transform } from '@/transform.js';
 
 export default function jsxPruneClassName(options?: Options) {
   return {
