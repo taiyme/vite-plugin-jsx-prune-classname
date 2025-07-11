@@ -1,9 +1,10 @@
 # @taiyme/vite-plugin-jsx-prune-classname
 
-[![License](https://img.shields.io/npm/l/%40taiyme%2Fvite-plugin-jsx-prune-classname?style=flat)](./LICENSE)
 [![Version](https://img.shields.io/npm/v/%40taiyme%2Fvite-plugin-jsx-prune-classname?style=flat)](https://www.npmjs.com/package/@taiyme/vite-plugin-jsx-prune-classname)
+[![License](https://img.shields.io/npm/l/%40taiyme%2Fvite-plugin-jsx-prune-classname?style=flat)](./LICENSE)
+[![Donate](https://img.shields.io/badge/donate-%3C3-f96854?style=flat)](https://taiy.me/to/donate)
 
-classNameの余分なスペースを除去する[Vite](https://vite.dev/guide)プラグインです。
+classNameの余分なスペースを除去する[Vite](https://vite.dev/)プラグインです。
 
 もともと[taiyのサイトのリポジトリ](https://github.com/taiyme/taiy.me)で自前実装していたものを、配布可能な形式にしました。
 
@@ -20,11 +21,11 @@ classNameの余分なスペースを除去する[Vite](https://vite.dev/guide)�
 pnpm add -D vite @taiyme/vite-plugin-jsx-prune-classname
 ```
 
-## 使い方
+## セットアップ
 
 ### `vite.config.ts` の設定
 
-`vite.config.ts` を作成し、以下のように構成します。
+`vite.config.ts` を作成し、次のように構成します。
 
 ```ts
 import jsxPruneClassName from '@taiyme/vite-plugin-jsx-prune-classname';
