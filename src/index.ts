@@ -5,7 +5,7 @@ import { transform } from './transform.js';
 
 export default function jsxPruneClassName(options?: Options) {
   return {
-    name: 'vite-plugin-jsx-prune-classname',
+    name: '@taiyme/vite-plugin-jsx-prune-classname',
     enforce: 'pre',
     transform(sourceCode, id) {
       if (id.includes('/node_modules/')) return;
