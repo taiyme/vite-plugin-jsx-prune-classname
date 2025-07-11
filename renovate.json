@@ -5,7 +5,9 @@
     "schedule:weekly",
     ":pinAllExceptPeerDependencies"
   ],
+  "enabled": true,
   "automerge": false,
+  "platformAutomerge": false,
   "timezone": "Asia/Tokyo",
   "assignees": ["taiyme"],
   "reviewers": ["taiyme"],
@@ -14,31 +16,54 @@
   "prHourlyLimit": 0,
   "separateMajorMinor": true,
   "separateMultipleMajor": true,
-  "rebaseWhen": "never",
+  "rebaseWhen": "automerging",
   "ignoreDeps": ["ubuntu"],
   "packageRules": [
     {
-      "groupName": "ci dependencies (non-major)",
-      "groupSlug": "ci-deps-non-major",
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "ci dependencies (non-major)",
+      "automerge": true
     },
     {
-      "groupName": "dependencies (non-major)",
-      "groupSlug": "deps-non-major",
       "matchManagers": ["npm"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "dev dependencies (non-major)",
+      "automerge": true
     },
     {
-      "groupName": "runtime dependencies",
-      "groupSlug": "runtime-deps",
-      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"]
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "groupName": "prod dependencies (patch)",
+      "automerge": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": "prod dependencies (minor)",
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"],
+      "groupName": "runtime dependencies (non-major)",
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"],
+      "groupName": "runtime dependencies (major)",
+      "automerge": false
     }
   ],
   "lockFileMaintenance": {
     "extends": [
       "schedule:monthly"
     ],
-    "enabled": true
+    "enabled": true,
+    "automerge": true
   }
 }
