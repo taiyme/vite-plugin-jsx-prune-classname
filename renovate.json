@@ -1,69 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:best-practices",
-    "schedule:weekly",
-    ":pinAllExceptPeerDependencies"
-  ],
-  "enabled": true,
-  "automerge": false,
-  "platformAutomerge": false,
-  "timezone": "Asia/Tokyo",
-  "assignees": ["taiyme"],
-  "reviewers": ["taiyme"],
-  "labels": ["renovate", "dependencies"],
-  "prConcurrentLimit": 0,
-  "prHourlyLimit": 0,
-  "separateMajorMinor": true,
-  "separateMultipleMajor": true,
-  "rebaseWhen": "automerging",
-  "ignoreDeps": ["ubuntu"],
-  "packageRules": [
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "ci dependencies (non-major)",
-      "automerge": true
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "dev dependencies (non-major)",
-      "automerge": true
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch"],
-      "groupName": "prod dependencies (patch)",
-      "automerge": true
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["minor"],
-      "groupName": "prod dependencies (minor)",
-      "automerge": false
-    },
-    {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"],
-      "groupName": "runtime dependencies (non-major)",
-      "automerge": true
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "matchDepNames": ["node", "@types/node", "pnpm", "npm:pnpm"],
-      "groupName": "runtime dependencies (major)",
-      "automerge": false
-    }
-  ],
-  "lockFileMaintenance": {
-    "extends": [
-      "schedule:monthly"
-    ],
-    "enabled": true,
-    "automerge": true
-  }
+    "github>taiyme/renovate-config",
+    ":assignAndReview(taiyme)"
+  ]
 }
