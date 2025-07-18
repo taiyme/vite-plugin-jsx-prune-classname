@@ -1,6 +1,7 @@
 import type { StringLiteral, TemplateElement } from '@babel/types';
 
-import { DEFAULT_OPTIONS, type Options } from '@/options.js';
+import type { Options } from '@/options.js';
+import { DEFAULT_OPTIONS } from '@/options.js';
 import { generate, parse, traverse } from '@/utils/babel.js';
 import { pruneClassName } from '@/utils/pruneClassName.js';
 import { toStringLiteral } from '@/utils/toStringLiteral.js';

@@ -1,6 +1,6 @@
+import type { Linter } from 'eslint';
 import taiymeConfig from '@taiyme/eslint-config';
 import tsEslintParser from '@typescript-eslint/parser';
-import type { Linter } from 'eslint';
 import gitignore from 'eslint-config-flat-gitignore';
 import globals from 'globals';
 
