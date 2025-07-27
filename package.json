@@ -38,7 +38,7 @@
     "@babel/traverse": "7.28.0"
   },
   "devDependencies": {
-    "@babel/types": "7.28.1",
+    "@babel/types": "7.28.2",
     "@raegen/vite-plugin-vitest-cache": "0.3.7",
     "@taiyme/eslint-config": "0.11.0",
     "@types/babel__generator": "7.27.0",
@@ -46,13 +46,13 @@
     "@types/node": "22.16.5",
     "@typescript-eslint/parser": "8.38.0",
     "better-typescript-lib": "2.11.0",
-    "eslint": "9.31.0",
+    "eslint": "9.32.0",
     "eslint-config-flat-gitignore": "2.1.0",
     "globals": "16.3.0",
-    "jiti": "2.4.2",
+    "jiti": "2.5.1",
     "tsdown": "0.12.9",
     "typescript": "5.8.3",
-    "vite": "7.0.5",
+    "vite": "7.0.6",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.2.4"
   },
