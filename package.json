@@ -43,7 +43,7 @@
     "@taiyme/eslint-config": "0.11.0",
     "@types/babel__generator": "7.27.0",
     "@types/babel__traverse": "7.28.0",
-    "@types/node": "22.17.1",
+    "@types/node": "22.17.2",
     "@typescript-eslint/parser": "8.39.0",
     "better-typescript-lib": "2.11.0",
     "eslint": "9.33.0",
