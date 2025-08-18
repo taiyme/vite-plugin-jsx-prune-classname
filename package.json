@@ -33,9 +33,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@babel/generator": "7.28.0",
-    "@babel/parser": "7.28.0",
-    "@babel/traverse": "7.28.0"
+    "@babel/generator": "7.28.3",
+    "@babel/parser": "7.28.3",
+    "@babel/traverse": "7.28.3"
   },
   "devDependencies": {
     "@babel/types": "7.28.2",
