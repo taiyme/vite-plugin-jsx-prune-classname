@@ -50,7 +50,7 @@
     "eslint-config-flat-gitignore": "2.1.0",
     "globals": "16.3.0",
     "jiti": "2.5.1",
-    "tsdown": "0.12.9",
+    "tsdown": "0.14.1",
     "typescript": "5.8.3",
     "vite": "7.1.2",
     "vite-tsconfig-paths": "5.1.4",
