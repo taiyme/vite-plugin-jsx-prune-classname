@@ -1,6 +1,6 @@
 [tools]
 node = "22.18.0"
-"npm:pnpm" = "10.14.0"
+"npm:pnpm" = "10.15.0"
 
 [settings]
 pin = true
