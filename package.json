@@ -43,7 +43,7 @@
     "@taiyme/eslint-config": "0.11.1",
     "@types/babel__generator": "7.27.0",
     "@types/babel__traverse": "7.28.0",
-    "@types/node": "22.18.11",
+    "@types/node": "22.18.12",
     "@typescript-eslint/parser": "8.46.2",
     "better-typescript-lib": "2.12.0",
     "eslint": "9.38.0",
@@ -64,7 +64,7 @@
       "optional": false
     }
   },
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.19.0",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=10.6.0"
