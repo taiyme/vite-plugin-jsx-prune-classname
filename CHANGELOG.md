@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4](https://github.com/taiyme/vite-plugin-jsx-prune-classname/compare/v0.0.3...v0.0.4) (2026-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update npm production dependencies (non-major) to v7.28.4 ([#40](https://github.com/taiyme/vite-plugin-jsx-prune-classname/issues/40)) ([23e8140](https://github.com/taiyme/vite-plugin-jsx-prune-classname/commit/23e814099e3c2e3c2b03b7fbc9d248d50279b482))
+* **deps:** update npm production dependencies (non-major) to v7.28.5 ([#64](https://github.com/taiyme/vite-plugin-jsx-prune-classname/issues/64)) ([3b8e0da](https://github.com/taiyme/vite-plugin-jsx-prune-classname/commit/3b8e0dae228c8997f15f405e8cc166c5afaff262))
+
 ## [0.0.3](https://github.com/taiyme/vite-plugin-jsx-prune-classname/compare/v0.0.2...v0.0.3) (2025-08-22)
 
 
