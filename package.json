@@ -40,7 +40,7 @@
   "devDependencies": {
     "@babel/types": "7.28.5",
     "@raegen/vite-plugin-vitest-cache": "0.3.7",
-    "@taiyme/eslint-config": "0.11.1",
+    "@taiyme/eslint-config": "1.0.0",
     "@types/babel__generator": "7.27.0",
     "@types/babel__traverse": "7.28.0",
     "@types/node": "22.19.3",
