@@ -64,10 +64,10 @@
       "optional": false
     }
   },
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=22.0.0",
-    "pnpm": ">=10.6.0"
+    "pnpm": ">=10.28.2"
   },
   "publishConfig": {
     "access": "public",
