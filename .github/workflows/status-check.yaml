@@ -1,13 +1,16 @@
 name: Status Check
 
 on:
-  pull_request_target:
+  pull_request_target: # zizmor: ignore[dangerous-triggers]
     branches:
       - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number }}
-  cancel-in-progress: true
+# zizmor: ignore[concurrency-limits]
 
 permissions: {}
 
@@ -15,15 +18,45 @@ jobs:
   status-check:
     name: Status Check
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 30
     permissions:
-      checks: read
-      statuses: read
+      pull-requests: read # Required for 'Watch PR checks' step.
+      checks: read        # Required for 'Watch PR checks' step.
+      statuses: read      # Required for 'Watch PR checks' step.
     steps:
-      - name: Run Merge Gatekeeper
-        uses: upsidr/merge-gatekeeper@09af7a82c1666d0e64d2bd8c01797a0bcfd3bb5d # v1.2.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          self: Status Check
-          interval: 10
-          timeout: 3600
+      - name: Watch PR checks
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          pr_number: ${{ github.event.number }}
+        run: |
+          while true; do
+
+            until checks_json="$( \
+              gh pr checks "$pr_number" \
+                --json bucket,name,workflow \
+                --jq 'map(select(.name != "Status Check"))' \
+            )"; do
+              sleep 30
+            done
+
+            checks_state="$(\
+              jq -cr '
+                {
+                  has_fail: any(.[]; .bucket == "fail" or .bucket == "cancel"),
+                  has_pending: any(.[]; .workflow != "" and .bucket == "pending"),
+                }
+                | if .has_fail then "fail"
+                  elif .has_pending then "pending"
+                  else "done"
+                  end
+              ' <<< "$checks_json" \
+            )"
+
+            case "$checks_state" in
+              fail)    exit 1 ;;
+              done)    exit 0 ;;
+              pending) sleep 15 ;;
+            esac
+
+          done
