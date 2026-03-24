@@ -1,5 +1,7 @@
 import { defineConfig } from 'tsdown';
 
+import meta from './package.json' with { type: 'json' };
+
 export default defineConfig({
   entry: 'src/index.ts',
   outDir: 'dist',
@@ -10,4 +12,7 @@ export default defineConfig({
   minify: true,
   exports: false,
   tsconfig: 'tsconfig.src.json',
+  define: {
+    __PACKAGE_NAME__: JSON.stringify(meta.name),
+  },
 });

@@ -29,6 +29,14 @@ export default defineConfig([
     ],
   },
   {
+    files: ['./src/const.ts'],
+    languageOptions: {
+      globals: {
+        __PACKAGE_NAME__: 'readonly',
+      },
+    },
+  },
+  {
     files: [
       '**/*.spec.ts',
       '**/*.test.ts',
