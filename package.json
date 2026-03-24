@@ -25,9 +25,9 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "clean": "node ./scripts/clean.js && pnpm store prune",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "clean": "node ./scripts/clean.ts && pnpm store prune",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "prepare": "pnpm run build",
     "test": "vitest run",
     "test:watch": "vitest"
