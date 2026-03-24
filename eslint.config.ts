@@ -29,7 +29,10 @@ export default defineConfig([
     ],
   },
   {
-    files: ['**/*.{spec,test}.ts'],
+    files: [
+      '**/*.spec.ts',
+      '**/*.test.ts',
+    ],
     languageOptions: {
       globals: {
         ...globals.vitest,
