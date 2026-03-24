@@ -1,2 +1,6 @@
+minimumReleaseAge: 20160 # 14 days
+minimumReleaseAgeExclude:
+  - '@taiyme/*'
+
 onlyBuiltDependencies:
   - esbuild
