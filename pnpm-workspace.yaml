@@ -1,6 +1,8 @@
 minimumReleaseAge: 20160 # 14 days
 minimumReleaseAgeExclude:
   - '@taiyme/*'
+  # Renovate security update: vite@6.4.2 || 8.0.5
+  - vite@6.4.2 || 8.0.5
 
 onlyBuiltDependencies:
   - esbuild
