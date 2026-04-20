@@ -50,7 +50,7 @@
     "globals": "17.4.0",
     "jiti": "2.6.1",
     "tsdown": "0.21.7",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vite": "8.0.5",
     "vitest": "4.1.2"
   },
