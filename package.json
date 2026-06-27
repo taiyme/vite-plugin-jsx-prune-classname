@@ -62,10 +62,10 @@
       "optional": false
     }
   },
-  "packageManager": "pnpm@10.34.1",
+  "packageManager": "pnpm@11.5.3",
   "engines": {
     "node": ">=22.0.0",
-    "pnpm": ">=10.28.2"
+    "pnpm": ">=11.5.3"
   },
   "publishConfig": {
     "access": "public",
