@@ -1,4 +1,4 @@
-minimumReleaseAge: 20160 # 14 days
+minimumReleaseAge: 10080 # 7 days
 minimumReleaseAgeExclude:
   - '@taiyme/*'
   # Renovate security update: vite@6.4.2 || 8.0.5
