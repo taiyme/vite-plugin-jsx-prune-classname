@@ -3,6 +3,8 @@ minimumReleaseAgeExclude:
   - '@taiyme/*'
   # Renovate security update: vite@6.4.2 || 8.0.5
   - vite@6.4.2 || 8.0.5
+  # Renovate security update: pnpm@10.34.5
+  - pnpm@10.34.5
 
 onlyBuiltDependencies:
   - esbuild
